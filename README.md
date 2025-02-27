@@ -4,12 +4,13 @@ Welcome to the **Frontend Blogs Repository** – your go-to collection of articl
 
 ## 📌 What's Inside?  
 - 🔥 **JavaScript Essentials** – Core concepts, best practices & advanced techniques.  
-- 🚀 *More topics coming soon!* Stay tuned for CSS, React, and other frontend technologies.  
+- 🎨 **CSS Mini Projects** – Hands-on projects to improve your styling & design skills.  
+- 🚀 *More topics coming soon!* Stay tuned for React, UI/UX, and performance optimization.  
 
 ## 🎯 Who Is This For?  
-✅ Frontend developers (beginners & pros)  
-✅ Web designers learning JavaScript  
-✅ Anyone looking to **level up** their frontend skills  
+✅ Developers & designers  
+✅ Frontend enthusiasts  
+✅ Anyone looking to **level up** their web development skills  
 
 ## 📖 How to Use?  
 1. 📂 **Browse the blogs**  

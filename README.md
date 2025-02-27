@@ -4,10 +4,7 @@ Welcome to the **Frontend Blogs Repository** – your go-to collection of articl
 
 ## 📌 What's Inside?  
 - 🔥 **JavaScript Essentials** – Core concepts, best practices & advanced techniques.  
-- 🎨 **CSS & UI/UX** – Styling tips, animations & responsive design.  
-- ⚛️ **React & Frameworks** – Build dynamic & scalable applications.  
-- 🛠 **VS Code & Productivity** – Shortcuts & extensions for faster development.  
-- 🚀 **Optimization & Performance** – Faster, smoother & efficient frontend apps.  
+- 🚀 *More topics coming soon!* Stay tuned for CSS, React, and other frontend technologies.  
 
 ## 🎯 Who Is This For?  
 ✅ Frontend developers (beginners & pros)  

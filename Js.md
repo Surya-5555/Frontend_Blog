@@ -468,6 +468,12 @@ function Roll(){
 }
 ```
 
+**Example Output (User inputs 3):**
+```
+Dice: 4, 2, 6
+(Images displayed corresponding to rolled numbers)
+```
+
 ## Random Password Generator
 
 ### Functionality
@@ -502,16 +508,21 @@ function generatePassword(length , includeUpperCase , includeLowerCase , include
 }
 ```
 
-Example usage:
+**Example usage:**
 ```javascript
-const passwordLength = 2;
+const passwordLength = 8;
 const includeUpperCase = true;
-const includeLowerCase = false;
-const includeNumbers = false;
+const includeLowerCase = true;
+const includeNumbers = true;
 const includeSymbols = false;
 
 const password = generatePassword(passwordLength , includeUpperCase , includeLowerCase , includeNumbers , includeSymbols);
 console.log(`Generated Password : ${password}`);
+```
+
+**Example Output:**
+```
+Generated Password: AbxT92hd
 ```
 
 ## JavaScript Concepts
@@ -533,6 +544,11 @@ function goodBye(){
    console.log(`Goodbye...!!`);
 }
 ```
+**Output:**
+```
+Hello...!!
+Goodbye...!!
+```
 
 ### forEach() Method
 Used to iterate over an array and apply a specified function to each element.
@@ -544,6 +560,14 @@ numbers.forEach(display);
 function display(element){
    console.log(element);
 }
+```
+**Output:**
+```
+1
+2
+3
+4
+5
 ```
 
 ### .map() Method
@@ -558,6 +582,10 @@ function square(element){
    return Math.pow(element,2);
 }
 ```
+**Output:**
+```
+[1, 4, 9, 16, 25]
+```
 
 ### .filter() Method
 Creates a new array by filtering elements based on a condition.
@@ -570,6 +598,10 @@ console.log(Filtered_Numbers);
 function even_number(element){
    return element % 2  === 0;
 }
+```
+**Output:**
+```
+[2, 4, 6]
 ```
 
 ### .reduce() Method
@@ -584,6 +616,10 @@ function sum(accumulator , element){
    return accumulator + element;
 }
 ```
+**Output:**
+```
+$160
+```
 
 ### Arrow Functions
 A more concise way to write function expressions.
@@ -592,6 +628,10 @@ Example:
 ```javascript
 const hello = () => console.log("Hello...!!");
 hello();
+```
+**Output:**
+```
+Hello...!!
 ```
 
 ### Object and `this` keyword
@@ -608,6 +648,11 @@ const person = {
 console.log(person.firstName);
 console.log(person.age);
 ```
+**Output:**
+```
+Surya
+17
+```
 
 Using `this` keyword:
 ```javascript
@@ -619,6 +664,10 @@ const this_var = {
     }
 }
 this_var.funct_call();
+```
+**Output:**
+```
+Spongebob Is 25 Years Old
 ```
 
 ### Classes and Objects
@@ -639,6 +688,11 @@ class Product {
 const store = new Product("Surya", 17);
 store.displayProduct();
 ```
+**Output:**
+```
+Name: Surya
+Age: 17
+```
 
 ### Static Keyword
 Defines properties or methods that belong to a class itself rather than instances.
@@ -649,6 +703,10 @@ class MathUtil{
     static PI = 3.14;
 }
 console.log(MathUtil.PI);
+```
+**Output:**
+```
+3.14
 ```
 
 ### Inheritance
@@ -668,8 +726,11 @@ class Rabbit extends Animal {
 const bunny = new Rabbit();
 bunny.eat();
 ```
+**Output:**
+```
+This animal is eating.
+```
 
----
 
 
 

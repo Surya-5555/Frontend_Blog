@@ -443,6 +443,235 @@ console.log(Merge("Surya", "Is", "a", "SDE"));
 ```
 
 ---
+# JavaScript Projects and Concepts
+
+## Dice Game
+
+### Functionality
+The Dice Game allows users to roll a dice multiple times and display the corresponding images of the rolled numbers.
+
+```javascript
+function Roll(){
+   const UserValue = document.getElementById("InputBox").value;
+   const Result = document.getElementById("Result");
+   const Images = document.getElementById("Images");
+   const Result_Array = [];
+   const Images_Array = [];
+
+   for(let i = 0; i < UserValue ; i++){
+      const Random_Number = Math.floor(Math.random()*6)+1;
+      Result_Array.push(Random_Number);
+      Images_Array.push(`<img src="Images/${Random_Number}.png">`)
+   }
+   Result.textContent = `Dice : ${Result_Array.join(" , ")}`;
+   Images.innerHTML = Images_Array.join(" ");
+}
+```
+
+## Random Password Generator
+
+### Functionality
+This function generates a random password based on user-selected parameters.
+
+```javascript
+function generatePassword(length , includeUpperCase , includeLowerCase , includeNumbers , includeSymbols){
+   const upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+   const numberchars = "0123456789";
+   const symbolChars = "!@#$%^&*()_+-\|/?";
+
+   let allowedChars = "";
+   let password = "";
+
+   allowedChars += includeUpperCase ? upperCaseChars : "";
+   allowedChars += includeLowerCase ? lowerCaseChars : "";
+   allowedChars += includeNumbers ? numberchars : "";
+   allowedChars += includeSymbols ? symbolChars : "";
+
+   if(length <= 0){
+      return `(Password Length Must Be Atleast One)`;
+   }
+   if(allowedChars.length === 0){
+      return `(Atleast 1 Set Of Characters Need To Be Selected)`;
+   }
+   for(let i = 0; i < length ; i++){
+      const randomIndex = Math.floor(Math.random() * allowedChars.length);
+      password += allowedChars[randomIndex];
+   }
+   return password;
+}
+```
+
+Example usage:
+```javascript
+const passwordLength = 2;
+const includeUpperCase = true;
+const includeLowerCase = false;
+const includeNumbers = false;
+const includeSymbols = false;
+
+const password = generatePassword(passwordLength , includeUpperCase , includeLowerCase , includeNumbers , includeSymbols);
+console.log(`Generated Password : ${password}`);
+```
+
+## JavaScript Concepts
+
+### Callback Functions
+A callback function is passed as an argument to another function, often used in asynchronous operations such as:
+1. Reading a file
+2. Network requests
+3. Interacting with databases
+
+Example:
+```javascript
+hello(goodBye);
+function hello(callback){
+   console.log(`Hello...!!`);
+   callback();
+}
+function goodBye(){
+   console.log(`Goodbye...!!`);
+}
+```
+
+### forEach() Method
+Used to iterate over an array and apply a specified function to each element.
+
+Example:
+```javascript
+let numbers = [1 , 2 , 3 , 4 , 5];
+numbers.forEach(display);
+function display(element){
+   console.log(element);
+}
+```
+
+### .map() Method
+Creates a new array by applying a function to each element.
+
+Example:
+```javascript
+const numbers = [1 , 2 , 3 , 4 , 5];
+const squares = numbers.map(square);
+console.log(squares);
+function square(element){
+   return Math.pow(element,2);
+}
+```
+
+### .filter() Method
+Creates a new array by filtering elements based on a condition.
+
+Example:
+```javascript
+let numbers = [1 , 2 , 3 , 4 , 5 , 6 , 7];
+let Filtered_Numbers = numbers.filter(even_number);
+console.log(Filtered_Numbers);
+function even_number(element){
+   return element % 2  === 0;
+}
+```
+
+### .reduce() Method
+Reduces an array to a single value using an accumulator.
+
+Example:
+```javascript
+const prices = [10 , 70 , 80];
+let sum_of_prices = prices.reduce(sum);
+console.log(`$${sum_of_prices}`);
+function sum(accumulator , element){
+   return accumulator + element;
+}
+```
+
+### Arrow Functions
+A more concise way to write function expressions.
+
+Example:
+```javascript
+const hello = () => console.log("Hello...!!");
+hello();
+```
+
+### Object and `this` keyword
+Objects represent a collection of related properties and methods.
+
+Example:
+```javascript
+const person = {
+    firstName : "Surya",
+    lastName : "PR",
+    age : 17,
+    isEmployed : true,
+}
+console.log(person.firstName);
+console.log(person.age);
+```
+
+Using `this` keyword:
+```javascript
+const this_var = {
+    name : "Spongebob",
+    age : 25,
+    funct_call : function(){
+        console.log(`${this.name} Is ${this.age} Years Old`);
+    }
+}
+this_var.funct_call();
+```
+
+### Classes and Objects
+A class provides a structured way to define objects.
+
+Example:
+```javascript
+class Product {
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+    displayProduct(){
+        console.log(`Name: ${this.name}`);
+        console.log(`Age: ${this.age}`);
+    }
+}
+const store = new Product("Surya", 17);
+store.displayProduct();
+```
+
+### Static Keyword
+Defines properties or methods that belong to a class itself rather than instances.
+
+Example:
+```javascript
+class MathUtil{
+    static PI = 3.14;
+}
+console.log(MathUtil.PI);
+```
+
+### Inheritance
+Allows a new class to inherit properties and methods from an existing class.
+
+Example:
+```javascript
+class Animal {
+    alive = true;
+    eat(){
+        console.log("This animal is eating.");
+    }
+}
+class Rabbit extends Animal {
+    name = "Rabbit";
+}
+const bunny = new Rabbit();
+bunny.eat();
+```
+
+---
+
+
 
 
 

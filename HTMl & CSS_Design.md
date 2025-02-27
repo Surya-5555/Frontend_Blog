@@ -81,7 +81,6 @@ A heading with a typing animation effect followed by a search box.
 This project builds a basic chessboard layout using HTML & CSS, with chess piece symbols.
 
 ### Code:
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -89,68 +88,71 @@ This project builds a basic chessboard layout using HTML & CSS, with chess piece
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chessboard</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <style>html{
-    background-color: grey;
-}
-body{
-    width:800px;
-    height:800px;
-    background-color:white;
-    margin:70px;
-    margin-left: 30%;
-    border:2px solid black;
-}
-.one{
-    width:100%;
-    height:100px;
-    float:left;
-}
-.two:hover{
-    color:chocolate;
-}
-.two{
-    width: 100px;
-    height: 100px;
-    float:left;
-    background-color: white;
-    font-size: 60px;
-
-    text-align:center;
-    color:rosybrown;
-    opacity:0.6;
-}
-.three{
-    width: 100px;
-    height: 100px;
-    float:left;
-    background-color: black;
-}
-</style>
+    <style>
+        html {
+            background-color: grey;
+        }
+        
+        body {
+            width: 800px;
+            height: 800px;
+            background-color: white;
+            margin: 70px auto;
+            border: 2px solid black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .one {
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        
+        .two {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            font-size: 60px;
+            color: rosybrown;
+            opacity: 0.6;
+        }
+        
+        .two:hover {
+            color: chocolate;
+        }
+        
+        .three {
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
     <div class="one">
-        <div class="two">&#9820</div>
-        <div class="two three">&#9822</div>
-        <div class="two">&#9821</div>
-        <div class="two three">&#9819</div>
-        <div class="two">&#9818</div>
-        <div class="two three">&#9821</div>
-        <div class="two">&#9822</div>
-        <div class="two three">&#9820</div>
+        <div class="two">&#9820;</div>
+        <div class="two three">&#9822;</div>
+        <div class="two">&#9821;</div>
+        <div class="two three">&#9819;</div>
+        <div class="two">&#9818;</div>
+        <div class="two three">&#9821;</div>
+        <div class="two">&#9822;</div>
+        <div class="two three">&#9820;</div>
     </div>
     <div class="one">
-        <div class="two three">&#9823</div>
-        <div class="two">&#9823</div>
-        <div class="two three">&#9823</div>
-        <div class="two">&#9823</div>
-        <div class="two three">&#9823</div>
-        <div class="two">&#9823</div>
-        <div class="two three">&#9823</div>
-        <div class="two">&#9823</div>
+        <div class="two three">&#9823;</div>
+        <div class="two">&#9823;</div>
+        <div class="two three">&#9823;</div>
+        <div class="two">&#9823;</div>
+        <div class="two three">&#9823;</div>
+        <div class="two">&#9823;</div>
+        <div class="two three">&#9823;</div>
+        <div class="two">&#9823;</div>
     </div>
 </body>
 </html>
-```
 
 ### Output:
 A chessboard layout with properly placed chess pieces.

@@ -1,257 +1,140 @@
-# A Collection of HTML & CSS Projects
-
-## Introduction
-In this blog, I will be showcasing multiple HTML & CSS projects that I have worked on. Each project is fully coded and functional, demonstrating different aspects of web development, from simple text formatting to fully responsive navigation bars.
-
----
-
-## 1. Typing Effect with Search Box
-
-This project creates a typing effect for a heading while also including a simple search box.
-
-### Code:
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Typing Effect with Search Box</title>
+    <title>HTML & CSS Projects Blog</title>
     <style>
-        * {
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #1e1e2f;
-            color: white;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        h1 {
-            font-size: 60px;
-            font-weight: 500;
-            border-right: 4px solid;
-            white-space: nowrap;
-            overflow: hidden;
-            animation: typing 3s steps(14) forwards, blink 0.5s infinite;
-            margin-bottom: 40px;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 14ch }
-        }
-        @keyframes blink {
-            50% { border-color: transparent }
-        }
-        input[type="text"] {
-            padding: 15px;
-            font-size: 18px;
-            border: none;
-            border-radius: 8px;
-            width: 300px;
-            outline: none;
+            background-color: #f4f4f4;
             color: #333;
         }
-        input[type="text"]::placeholder {
-            color: #999;
+        .container {
+            width: 80%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #444;
+        }
+        pre {
+            background: #222;
+            color: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
         }
     </style>
 </head>
 <body>
-    <h1>Surya Is A Boy</h1>
-    <input type="text" placeholder="Search...">
-</body>
-</html>
-```
-
-### Output:
-A heading with a typing animation effect followed by a search box.
-
----
-
-## 2. Chessboard Layout
-
-This project builds a basic chessboard layout using HTML & CSS, with chess piece symbols.
-
-### Code:
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chessboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        html {
-            background-color: grey;
-        }
+    <div class="container">
+        <h1>A Collection of HTML & CSS Projects</h1>
+        <p>In this blog, I will be showcasing multiple HTML & CSS projects that I have worked on. Each project demonstrates different aspects of web development.</p>
         
-        body {
-            width: 800px;
-            height: 800px;
-            background-color: white;
-            margin: 70px auto;
-            border: 2px solid black;
-            display: flex;
-            flex-wrap: wrap;
-        }
+        <h2>1. Typing Effect with Search Box</h2>
+        <p>This project creates a typing effect for a heading while also including a simple search box.</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body { background-color: #1e1e2f; color: white; font-family: 'Courier New'; }
+        h1 { animation: typing 3s steps(14) forwards, blink 0.5s infinite; }
+        @keyframes typing { from { width: 0 } to { width: 14ch } }
+        @keyframes blink { 50% { border-color: transparent } }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Surya Is A Boy&lt;/h1&gt;
+    &lt;input type="text" placeholder="Search..."&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
         
-        .one {
-            width: 100%;
-            height: 100px;
-            display: flex;
-        }
+        <h2>2. Chessboard Layout</h2>
+        <p>This project builds a chessboard layout using HTML & CSS, with chess piece symbols.</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body { display: flex; flex-wrap: wrap; width: 800px; height: 800px; }
+        .two { width: 100px; height: 100px; text-align: center; font-size: 60px; }
+        .three { background-color: black; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="one"&gt;
+        &lt;div class="two"&gt;&#9820;&lt;/div&gt;
+        &lt;div class="two three"&gt;&#9822;&lt;/div&gt;
+        &lt;div class="two"&gt;&#9821;&lt;/div&gt;
+        &lt;div class="two three"&gt;&#9819;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
         
-        .two {
-            width: 100px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: white;
-            font-size: 60px;
-            color: rosybrown;
-            opacity: 0.6;
+        <h2>3. Simple Form Validation</h2>
+        <p>A basic form validation script that ensures the user fills in the required fields before submitting.</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;script&gt;
+        function formvalid() {
+            const name = document.getElementById('one').value;
+            if (name === '') {
+                alert('Fill all fields');
+                return false;
+            }
+            alert('Form done');
+            return true;
         }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;form onsubmit="return formvalid()"&gt;
+        NAME: &lt;input type="text" id="one"&gt;
+        &lt;input type="submit"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
         
-        .two:hover {
-            color: chocolate;
+        <h2>4. Responsive Navigation Bar</h2>
+        <p>A responsive navigation bar that adapts to different screen sizes.</p>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        .navbar { display: flex; background-color: #2c3e50; color: white; }
+        .navbar-links ul { display: flex; }
+        @media (max-width: 600px) {
+            .navbar-links { display: none; }
         }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="navbar"&gt;
+        &lt;div class="logo"&gt;Surya&lt;/div&gt;
+        &lt;div class="navbar-links"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
         
-        .three {
-            background-color: black;
-        }
-    </style>
-</head>
-<body>
-    <div class="one">
-        <div class="two">&#9820;</div>
-        <div class="two three">&#9822;</div>
-        <div class="two">&#9821;</div>
-        <div class="two three">&#9819;</div>
-        <div class="two">&#9818;</div>
-        <div class="two three">&#9821;</div>
-        <div class="two">&#9822;</div>
-        <div class="two three">&#9820;</div>
-    </div>
-    <div class="one">
-        <div class="two three">&#9823;</div>
-        <div class="two">&#9823;</div>
-        <div class="two three">&#9823;</div>
-        <div class="two">&#9823;</div>
-        <div class="two three">&#9823;</div>
-        <div class="two">&#9823;</div>
-        <div class="two three">&#9823;</div>
-        <div class="two">&#9823;</div>
-    </div>
-</body>
-</html>
-
-### Output:
-A chessboard layout with properly placed chess pieces.
-
----
-
-## 3. Simple Form Validation
-
-A basic form validation script that ensures the user fills in the required fields before submitting.
-
-### Code:
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
-</head>
-<body>
-    <form onsubmit="return formvalid()">
-        NAME:<input type="text" id="one" ><br><br>
-        EMAIL:<input type="email" id="two" ><br><br>
-        GENDER:<input type="text" required><br><br>
-        AGE:<input type="number" required><br><br>
-        <hr><br>
-        <input type="submit">   <input type="reset">
-    </form>
-</body>
-<script>
-    function formvalid(){
-        const one=document.getElementById('one').value;
-        const two=document.getElementById('two').value;
-        if(one===''||two===''){
-            alert('fill all fields');
-            return false;
-        }
-        alert('form done');
-        return true;
-    }
-</script>
-</html>
-```
-
-### Output:
-A form that alerts users if they do not fill in all required fields before submission.
-
----
-
-## 4. Responsive Navigation Bar
-
-A responsive navigation bar that adapts to different screen sizes.
-
-### Code:
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Nav Bar</title>
-    <style>
-        *{ padding:0; margin:0; box-sizing: border-box; }
-        .navbar{ display: flex; justify-content: space-between; align-items: center; background-color: #2c3e50; color: white; }
-        .logo{ font-size: 20px; font-weight: 500; margin: 8px; }
-        .navbar-links ul{ display: flex; }
-        .navbar-links ul li{ list-style: none; }
-        .navbar-links ul li a{ text-decoration: none; color:honeydew; display: block; padding: 18px; }
-        .navbar-links ul li a:hover{ background-color: #34495e; }
-        .btn{ position: absolute; top:16px; right:16px; width:30px; height: 22px; display:none; flex-direction: column; justify-content: space-between; }
-        .bar{ height: 3px; width: 100%; background-color: #fff; }
-        @media (max-width:600px) {
-            .btn{ display: flex; }
-            .navbar-links{ display: none; width: 100%; }
-            .navbar{ flex-direction: column; align-items: flex-start; }
-            .navbar-links.active{ display:flex; }
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <div class="logo">Surya</div>
-        <a href="#" class="btn">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <div class="navbar-links">
-            <ul>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </div>
+        <h2>Conclusion</h2>
+        <p>These projects demonstrate essential HTML & CSS concepts. Let me know if you want to see more projects!</p>
     </div>
 </body>
 </html>
-```
-
----
-
-## Conclusion
-These projects demonstrate essential HTML & CSS concepts. Let me know if you want to see more projects!
-

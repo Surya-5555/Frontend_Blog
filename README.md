@@ -5,8 +5,8 @@ Welcome to the **Frontend Blogs Repository** – your go-to collection of articl
 ## 📌 What's Inside?  
 - 🔥 **JavaScript Essentials** – Core concepts, best practices & advanced techniques.  
 - 🎨 **CSS Mini Projects** – Hands-on projects to improve your styling & design skills.  
-- 🚀 *More topics coming soon!* Stay tuned for React, UI/UX, and performance optimization.  
-
+- 🚀 *More topics coming soon!* Stay tuned for React, UI/UX, and performance optimization.
+- 
 ## 🎯 Who Is This For?  
 ✅ Developers & designers  
 ✅ Frontend enthusiasts  
